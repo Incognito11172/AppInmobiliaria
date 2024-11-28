@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-    internal class Oficina
+    public class Oficina
     {
+
     }
 }
