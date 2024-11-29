@@ -31,8 +31,34 @@ namespace BusinessLogic
                 throw;
             }
         }
+
+        public bool DoesThisOwnerExist()
+        {
+            try
+            {
+                string query = "select nombre, telefono from Propietario where nombre=@nombre and telefono=@telefono";
+
+                DA dbAccess = new DA();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@nombre", nombre);
+                cmd.Parameters.AddWithValue("@telefono", telefono);
+
+                SqlDataReader reader = dbAccess.GetConsult(cmd);
+
+                if (reader.HasRows) return true;
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+
+        }
     }
-}
+}    
  
     
 

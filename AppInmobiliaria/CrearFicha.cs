@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLogic;
 
 namespace Presentation
 {
@@ -21,6 +22,23 @@ namespace Presentation
         private void cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void continuar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Propietario propietario = new Propietario();
+
+                propietario.nombre = nombrePropietario.Text;
+                propietario.telefono = telefonoPropietario.Text;
+
+                if (!propietario.DoesThisOwnerExist()) propietario.Add();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearFicha));
             panel1 = new Panel();
+            label3 = new Label();
             panel2 = new Panel();
             panel3 = new Panel();
             materialCard3 = new MaterialSkin.Controls.MaterialCard();
@@ -49,7 +50,6 @@
             subirImagen = new MaterialSkin.Controls.MaterialButton();
             materialCard8 = new MaterialSkin.Controls.MaterialCard();
             pictureBox12 = new PictureBox();
-            label3 = new Label();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             materialCard3.SuspendLayout();
@@ -68,6 +68,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(784, 100);
             panel1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Yu Gothic UI Semibold", 30F);
+            label3.Location = new Point(23, 24);
+            label3.Name = "label3";
+            label3.Size = new Size(205, 54);
+            label3.TabIndex = 0;
+            label3.Text = "Oficina de";
             // 
             // panel2
             // 
@@ -149,6 +159,7 @@
             continuar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             continuar.UseAccentColor = false;
             continuar.UseVisualStyleBackColor = true;
+            continuar.Click += continuar_Click;
             // 
             // tipoLocal
             // 
@@ -441,16 +452,6 @@
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox12.TabIndex = 4;
             pictureBox12.TabStop = false;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Yu Gothic UI Semibold", 30F);
-            label3.Location = new Point(23, 24);
-            label3.Name = "label3";
-            label3.Size = new Size(205, 54);
-            label3.TabIndex = 0;
-            label3.Text = "Oficina de";
             // 
             // CrearFicha
             // 
