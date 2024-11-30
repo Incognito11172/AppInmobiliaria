@@ -37,10 +37,10 @@ namespace Presentation
                 propietario.nombre = nombrePropietario.Text;
                 propietario.telefono = telefonoPropietario.Text;
 
-                if (!propietario.DoesThisOwnerExist()) propietario.Add();
+                //if (!propietario.DoesThisOwnerExist()) propietario.Add();
 
                 // Obtener ID del propietario
-                int? id_propietario = propietario.GetID();
+                //int? id_propietario = propietario.GetID();
 
                 // Obtener ID de la oficina
                 Oficina oficina = new Oficina();
@@ -52,7 +52,7 @@ namespace Presentation
                 Inmueble inmueble = new Inmueble();
 
                 inmueble.id_oficina = id_oficina;
-                inmueble.id_propietario = id_propietario;
+                //inmueble.id_propietario = id_propietario;
                 inmueble.precio_venta = float.Parse(precioVenta.Text);
                 inmueble.precio_alquiler = float.Parse(precioAlquiler.Text);
                 inmueble.direccion = direccion.Text;
