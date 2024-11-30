@@ -13,7 +13,7 @@ namespace Presentation
 {
     public partial class AñadirLocal : Form
     {
-        public AñadirLocal(Inmueble inmueble)
+        public AñadirLocal(Propietario propietario, Inmueble inmueble)
         {
             InitializeComponent();
         }

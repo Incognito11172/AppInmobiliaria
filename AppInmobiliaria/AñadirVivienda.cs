@@ -13,7 +13,7 @@ namespace Presentation
 {
     public partial class AñadirVivienda : Form
     {
-        public AñadirVivienda(Inmueble inmueble)
+        public AñadirVivienda(Propietario propietario, Inmueble inmueble)
         {
             InitializeComponent();
         }
