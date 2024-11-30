@@ -36,7 +36,7 @@
             materialCard3 = new MaterialSkin.Controls.MaterialCard();
             cancelar = new MaterialSkin.Controls.MaterialButton();
             continuar = new MaterialSkin.Controls.MaterialButton();
-            tipoLocal = new MaterialSkin.Controls.MaterialComboBox();
+            tipoInmueble = new MaterialSkin.Controls.MaterialComboBox();
             direccion = new MaterialSkin.Controls.MaterialTextBox2();
             precioAlquiler = new MaterialSkin.Controls.MaterialTextBox2();
             area = new MaterialSkin.Controls.MaterialTextBox2();
@@ -104,7 +104,7 @@
             materialCard3.BackColor = Color.FromArgb(255, 255, 255);
             materialCard3.Controls.Add(cancelar);
             materialCard3.Controls.Add(continuar);
-            materialCard3.Controls.Add(tipoLocal);
+            materialCard3.Controls.Add(tipoInmueble);
             materialCard3.Controls.Add(direccion);
             materialCard3.Controls.Add(precioAlquiler);
             materialCard3.Controls.Add(area);
@@ -161,28 +161,28 @@
             continuar.UseVisualStyleBackColor = true;
             continuar.Click += continuar_Click;
             // 
-            // tipoLocal
+            // tipoInmueble
             // 
-            tipoLocal.AutoResize = false;
-            tipoLocal.BackColor = Color.FromArgb(255, 255, 255);
-            tipoLocal.Depth = 0;
-            tipoLocal.DrawMode = DrawMode.OwnerDrawVariable;
-            tipoLocal.DropDownHeight = 174;
-            tipoLocal.DropDownStyle = ComboBoxStyle.DropDownList;
-            tipoLocal.DropDownWidth = 121;
-            tipoLocal.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            tipoLocal.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            tipoLocal.FormattingEnabled = true;
-            tipoLocal.IntegralHeight = false;
-            tipoLocal.ItemHeight = 43;
-            tipoLocal.Items.AddRange(new object[] { "Vivienda", "Local" });
-            tipoLocal.Location = new Point(37, 212);
-            tipoLocal.MaxDropDownItems = 4;
-            tipoLocal.MouseState = MaterialSkin.MouseState.OUT;
-            tipoLocal.Name = "tipoLocal";
-            tipoLocal.Size = new Size(146, 49);
-            tipoLocal.StartIndex = 0;
-            tipoLocal.TabIndex = 5;
+            tipoInmueble.AutoResize = false;
+            tipoInmueble.BackColor = Color.FromArgb(255, 255, 255);
+            tipoInmueble.Depth = 0;
+            tipoInmueble.DrawMode = DrawMode.OwnerDrawVariable;
+            tipoInmueble.DropDownHeight = 174;
+            tipoInmueble.DropDownStyle = ComboBoxStyle.DropDownList;
+            tipoInmueble.DropDownWidth = 121;
+            tipoInmueble.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            tipoInmueble.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            tipoInmueble.FormattingEnabled = true;
+            tipoInmueble.IntegralHeight = false;
+            tipoInmueble.ItemHeight = 43;
+            tipoInmueble.Items.AddRange(new object[] { "Vivienda", "Local" });
+            tipoInmueble.Location = new Point(37, 212);
+            tipoInmueble.MaxDropDownItems = 4;
+            tipoInmueble.MouseState = MaterialSkin.MouseState.OUT;
+            tipoInmueble.Name = "tipoInmueble";
+            tipoInmueble.Size = new Size(146, 49);
+            tipoInmueble.StartIndex = 0;
+            tipoInmueble.TabIndex = 5;
             // 
             // direccion
             // 
@@ -498,7 +498,7 @@
         private Label label2;
         private MaterialSkin.Controls.MaterialTextBox2 direccion;
         private MaterialSkin.Controls.MaterialTextBox2 precioAlquiler;
-        private MaterialSkin.Controls.MaterialComboBox tipoLocal;
+        private MaterialSkin.Controls.MaterialComboBox tipoInmueble;
         private MaterialSkin.Controls.MaterialButton cancelar;
         private MaterialSkin.Controls.MaterialButton continuar;
         private Label label3;
