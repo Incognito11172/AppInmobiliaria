@@ -428,6 +428,7 @@
             subirImagen.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             subirImagen.UseAccentColor = false;
             subirImagen.UseVisualStyleBackColor = true;
+            subirImagen.Click += subirImagen_Click;
             // 
             // materialCard8
             // 
