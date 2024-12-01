@@ -31,18 +31,19 @@
             panel1 = new Panel();
             panel2 = new Panel();
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            materialTextBox23 = new MaterialSkin.Controls.MaterialTextBox2();
-            materialTextBox22 = new MaterialSkin.Controls.MaterialTextBox2();
-            materialCheckedListBox1 = new MaterialSkin.Controls.MaterialCheckedListBox();
-            materialCheckbox4 = new MaterialSkin.Controls.MaterialCheckbox();
-            materialCheckbox3 = new MaterialSkin.Controls.MaterialCheckbox();
-            materialCheckbox2 = new MaterialSkin.Controls.MaterialCheckbox();
-            materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
-            materialTextBox21 = new MaterialSkin.Controls.MaterialTextBox2();
-            nombrePropietario = new MaterialSkin.Controls.MaterialTextBox2();
-            label1 = new Label();
-            materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            tipoVivienda = new MaterialSkin.Controls.MaterialComboBox();
             materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            areaTerraza = new MaterialSkin.Controls.MaterialTextBox2();
+            cantidadArmarios = new MaterialSkin.Controls.MaterialTextBox2();
+            materialCheckedListBox1 = new MaterialSkin.Controls.MaterialCheckedListBox();
+            calefaccionCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            gasCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            garajeCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            salonCheckbox = new MaterialSkin.Controls.MaterialCheckbox();
+            cantidadBaños = new MaterialSkin.Controls.MaterialTextBox2();
+            cantidadHabitaciones = new MaterialSkin.Controls.MaterialTextBox2();
+            label1 = new Label();
             materialCard2.SuspendLayout();
             materialCheckedListBox1.SuspendLayout();
             SuspendLayout();
@@ -68,13 +69,14 @@
             // materialCard2
             // 
             materialCard2.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard2.Controls.Add(tipoVivienda);
             materialCard2.Controls.Add(materialButton2);
             materialCard2.Controls.Add(materialButton1);
-            materialCard2.Controls.Add(materialTextBox23);
-            materialCard2.Controls.Add(materialTextBox22);
+            materialCard2.Controls.Add(areaTerraza);
+            materialCard2.Controls.Add(cantidadArmarios);
             materialCard2.Controls.Add(materialCheckedListBox1);
-            materialCard2.Controls.Add(materialTextBox21);
-            materialCard2.Controls.Add(nombrePropietario);
+            materialCard2.Controls.Add(cantidadBaños);
+            materialCard2.Controls.Add(cantidadHabitaciones);
             materialCard2.Controls.Add(label1);
             materialCard2.Depth = 0;
             materialCard2.Font = new Font("Segoe UI", 20F);
@@ -87,231 +89,28 @@
             materialCard2.Size = new Size(677, 361);
             materialCard2.TabIndex = 3;
             // 
-            // materialTextBox23
+            // tipoVivienda
             // 
-            materialTextBox23.AnimateReadOnly = false;
-            materialTextBox23.BackgroundImageLayout = ImageLayout.None;
-            materialTextBox23.CharacterCasing = CharacterCasing.Normal;
-            materialTextBox23.Depth = 0;
-            materialTextBox23.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox23.HideSelection = true;
-            materialTextBox23.Hint = "Área de la terraza";
-            materialTextBox23.LeadingIcon = null;
-            materialTextBox23.Location = new Point(363, 147);
-            materialTextBox23.MaxLength = 32767;
-            materialTextBox23.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox23.Name = "materialTextBox23";
-            materialTextBox23.PasswordChar = '\0';
-            materialTextBox23.PrefixSuffixText = null;
-            materialTextBox23.ReadOnly = false;
-            materialTextBox23.RightToLeft = RightToLeft.No;
-            materialTextBox23.SelectedText = "";
-            materialTextBox23.SelectionLength = 0;
-            materialTextBox23.SelectionStart = 0;
-            materialTextBox23.ShortcutsEnabled = true;
-            materialTextBox23.Size = new Size(251, 48);
-            materialTextBox23.TabIndex = 6;
-            materialTextBox23.TabStop = false;
-            materialTextBox23.TextAlign = HorizontalAlignment.Left;
-            materialTextBox23.TrailingIcon = null;
-            materialTextBox23.UseSystemPasswordChar = false;
-            // 
-            // materialTextBox22
-            // 
-            materialTextBox22.AnimateReadOnly = false;
-            materialTextBox22.BackgroundImageLayout = ImageLayout.None;
-            materialTextBox22.CharacterCasing = CharacterCasing.Normal;
-            materialTextBox22.Depth = 0;
-            materialTextBox22.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox22.HideSelection = true;
-            materialTextBox22.Hint = "Cantidad de armarios";
-            materialTextBox22.LeadingIcon = null;
-            materialTextBox22.Location = new Point(66, 147);
-            materialTextBox22.MaxLength = 32767;
-            materialTextBox22.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox22.Name = "materialTextBox22";
-            materialTextBox22.PasswordChar = '\0';
-            materialTextBox22.PrefixSuffixText = null;
-            materialTextBox22.ReadOnly = false;
-            materialTextBox22.RightToLeft = RightToLeft.No;
-            materialTextBox22.SelectedText = "";
-            materialTextBox22.SelectionLength = 0;
-            materialTextBox22.SelectionStart = 0;
-            materialTextBox22.ShortcutsEnabled = true;
-            materialTextBox22.Size = new Size(251, 48);
-            materialTextBox22.TabIndex = 5;
-            materialTextBox22.TabStop = false;
-            materialTextBox22.TextAlign = HorizontalAlignment.Left;
-            materialTextBox22.TrailingIcon = null;
-            materialTextBox22.UseSystemPasswordChar = false;
-            // 
-            // materialCheckedListBox1
-            // 
-            materialCheckedListBox1.AutoScroll = true;
-            materialCheckedListBox1.BackColor = Color.FromArgb(255, 255, 255);
-            materialCheckedListBox1.Controls.Add(materialCheckbox4);
-            materialCheckedListBox1.Controls.Add(materialCheckbox3);
-            materialCheckedListBox1.Controls.Add(materialCheckbox2);
-            materialCheckedListBox1.Controls.Add(materialCheckbox1);
-            materialCheckedListBox1.Depth = 0;
-            materialCheckedListBox1.Location = new Point(118, 220);
-            materialCheckedListBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCheckedListBox1.Name = "materialCheckedListBox1";
-            materialCheckedListBox1.Size = new Size(430, 70);
-            materialCheckedListBox1.Striped = false;
-            materialCheckedListBox1.StripeDarkColor = Color.Empty;
-            materialCheckedListBox1.TabIndex = 4;
-            // 
-            // materialCheckbox4
-            // 
-            materialCheckbox4.AutoSize = true;
-            materialCheckbox4.Depth = 0;
-            materialCheckbox4.Location = new Point(195, 15);
-            materialCheckbox4.Margin = new Padding(0);
-            materialCheckbox4.MouseLocation = new Point(-1, -1);
-            materialCheckbox4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCheckbox4.Name = "materialCheckbox4";
-            materialCheckbox4.ReadOnly = false;
-            materialCheckbox4.Ripple = true;
-            materialCheckbox4.Size = new Size(119, 37);
-            materialCheckbox4.TabIndex = 3;
-            materialCheckbox4.Text = "Calefacción";
-            materialCheckbox4.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckbox3
-            // 
-            materialCheckbox3.AutoSize = true;
-            materialCheckbox3.Depth = 0;
-            materialCheckbox3.Location = new Point(116, 15);
-            materialCheckbox3.Margin = new Padding(0);
-            materialCheckbox3.MouseLocation = new Point(-1, -1);
-            materialCheckbox3.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCheckbox3.Name = "materialCheckbox3";
-            materialCheckbox3.ReadOnly = false;
-            materialCheckbox3.Ripple = true;
-            materialCheckbox3.Size = new Size(63, 37);
-            materialCheckbox3.TabIndex = 2;
-            materialCheckbox3.Text = "Gas";
-            materialCheckbox3.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckbox2
-            // 
-            materialCheckbox2.AutoSize = true;
-            materialCheckbox2.Depth = 0;
-            materialCheckbox2.Location = new Point(14, 15);
-            materialCheckbox2.Margin = new Padding(0);
-            materialCheckbox2.MouseLocation = new Point(-1, -1);
-            materialCheckbox2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCheckbox2.Name = "materialCheckbox2";
-            materialCheckbox2.ReadOnly = false;
-            materialCheckbox2.Ripple = true;
-            materialCheckbox2.Size = new Size(81, 37);
-            materialCheckbox2.TabIndex = 1;
-            materialCheckbox2.Text = "Garaje";
-            materialCheckbox2.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckbox1
-            // 
-            materialCheckbox1.AutoSize = true;
-            materialCheckbox1.Depth = 0;
-            materialCheckbox1.Location = new Point(327, 15);
-            materialCheckbox1.Margin = new Padding(0);
-            materialCheckbox1.MouseLocation = new Point(-1, -1);
-            materialCheckbox1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCheckbox1.Name = "materialCheckbox1";
-            materialCheckbox1.ReadOnly = false;
-            materialCheckbox1.Ripple = true;
-            materialCheckbox1.Size = new Size(76, 37);
-            materialCheckbox1.TabIndex = 0;
-            materialCheckbox1.Text = "Salón";
-            materialCheckbox1.UseVisualStyleBackColor = true;
-            // 
-            // materialTextBox21
-            // 
-            materialTextBox21.AnimateReadOnly = false;
-            materialTextBox21.BackgroundImageLayout = ImageLayout.None;
-            materialTextBox21.CharacterCasing = CharacterCasing.Normal;
-            materialTextBox21.Depth = 0;
-            materialTextBox21.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox21.HideSelection = true;
-            materialTextBox21.Hint = "Cantidad de baños";
-            materialTextBox21.LeadingIcon = null;
-            materialTextBox21.Location = new Point(363, 81);
-            materialTextBox21.MaxLength = 32767;
-            materialTextBox21.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox21.Name = "materialTextBox21";
-            materialTextBox21.PasswordChar = '\0';
-            materialTextBox21.PrefixSuffixText = null;
-            materialTextBox21.ReadOnly = false;
-            materialTextBox21.RightToLeft = RightToLeft.No;
-            materialTextBox21.SelectedText = "";
-            materialTextBox21.SelectionLength = 0;
-            materialTextBox21.SelectionStart = 0;
-            materialTextBox21.ShortcutsEnabled = true;
-            materialTextBox21.Size = new Size(251, 48);
-            materialTextBox21.TabIndex = 3;
-            materialTextBox21.TabStop = false;
-            materialTextBox21.TextAlign = HorizontalAlignment.Left;
-            materialTextBox21.TrailingIcon = null;
-            materialTextBox21.UseSystemPasswordChar = false;
-            // 
-            // nombrePropietario
-            // 
-            nombrePropietario.AnimateReadOnly = false;
-            nombrePropietario.BackgroundImageLayout = ImageLayout.None;
-            nombrePropietario.CharacterCasing = CharacterCasing.Normal;
-            nombrePropietario.Depth = 0;
-            nombrePropietario.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            nombrePropietario.HideSelection = true;
-            nombrePropietario.Hint = "Cantidad de habitaciones";
-            nombrePropietario.LeadingIcon = null;
-            nombrePropietario.Location = new Point(66, 81);
-            nombrePropietario.MaxLength = 32767;
-            nombrePropietario.MouseState = MaterialSkin.MouseState.OUT;
-            nombrePropietario.Name = "nombrePropietario";
-            nombrePropietario.PasswordChar = '\0';
-            nombrePropietario.PrefixSuffixText = null;
-            nombrePropietario.ReadOnly = false;
-            nombrePropietario.RightToLeft = RightToLeft.No;
-            nombrePropietario.SelectedText = "";
-            nombrePropietario.SelectionLength = 0;
-            nombrePropietario.SelectionStart = 0;
-            nombrePropietario.ShortcutsEnabled = true;
-            nombrePropietario.Size = new Size(251, 48);
-            nombrePropietario.TabIndex = 2;
-            nombrePropietario.TabStop = false;
-            nombrePropietario.TextAlign = HorizontalAlignment.Left;
-            nombrePropietario.TrailingIcon = null;
-            nombrePropietario.UseSystemPasswordChar = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Yu Gothic UI Semibold", 20F);
-            label1.Location = new Point(211, 14);
-            label1.Name = "label1";
-            label1.Size = new Size(262, 37);
-            label1.TabIndex = 1;
-            label1.Text = "Datos de la vivienda";
-            // 
-            // materialButton1
-            // 
-            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton1.Depth = 0;
-            materialButton1.HighEmphasis = true;
-            materialButton1.Icon = null;
-            materialButton1.Location = new Point(211, 305);
-            materialButton1.Margin = new Padding(4, 6, 4, 6);
-            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton1.Name = "materialButton1";
-            materialButton1.NoAccentTextColor = Color.Empty;
-            materialButton1.Size = new Size(104, 36);
-            materialButton1.TabIndex = 7;
-            materialButton1.Text = "Continuar";
-            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton1.UseAccentColor = false;
-            materialButton1.UseVisualStyleBackColor = true;
+            tipoVivienda.AutoResize = false;
+            tipoVivienda.BackColor = Color.FromArgb(255, 255, 255);
+            tipoVivienda.Depth = 0;
+            tipoVivienda.DrawMode = DrawMode.OwnerDrawVariable;
+            tipoVivienda.DropDownHeight = 174;
+            tipoVivienda.DropDownStyle = ComboBoxStyle.DropDownList;
+            tipoVivienda.DropDownWidth = 121;
+            tipoVivienda.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            tipoVivienda.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            tipoVivienda.FormattingEnabled = true;
+            tipoVivienda.IntegralHeight = false;
+            tipoVivienda.ItemHeight = 43;
+            tipoVivienda.Items.AddRange(new object[] { "Casa", "Piso", "Villa" });
+            tipoVivienda.Location = new Point(66, 217);
+            tipoVivienda.MaxDropDownItems = 4;
+            tipoVivienda.MouseState = MaterialSkin.MouseState.OUT;
+            tipoVivienda.Name = "tipoVivienda";
+            tipoVivienda.Size = new Size(126, 49);
+            tipoVivienda.StartIndex = 0;
+            tipoVivienda.TabIndex = 9;
             // 
             // materialButton2
             // 
@@ -320,7 +119,7 @@
             materialButton2.Depth = 0;
             materialButton2.HighEmphasis = true;
             materialButton2.Icon = null;
-            materialButton2.Location = new Point(363, 305);
+            materialButton2.Location = new Point(518, 305);
             materialButton2.Margin = new Padding(4, 6, 4, 6);
             materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton2.Name = "materialButton2";
@@ -331,6 +130,233 @@
             materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             materialButton2.UseAccentColor = false;
             materialButton2.UseVisualStyleBackColor = true;
+            // 
+            // materialButton1
+            // 
+            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            materialButton1.Depth = 0;
+            materialButton1.HighEmphasis = true;
+            materialButton1.Icon = null;
+            materialButton1.Location = new Point(379, 305);
+            materialButton1.Margin = new Padding(4, 6, 4, 6);
+            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialButton1.Name = "materialButton1";
+            materialButton1.NoAccentTextColor = Color.Empty;
+            materialButton1.Size = new Size(104, 36);
+            materialButton1.TabIndex = 7;
+            materialButton1.Text = "Continuar";
+            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            materialButton1.UseAccentColor = false;
+            materialButton1.UseVisualStyleBackColor = true;
+            materialButton1.Click += materialButton1_Click;
+            // 
+            // areaTerraza
+            // 
+            areaTerraza.AnimateReadOnly = false;
+            areaTerraza.BackgroundImageLayout = ImageLayout.None;
+            areaTerraza.CharacterCasing = CharacterCasing.Normal;
+            areaTerraza.Depth = 0;
+            areaTerraza.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            areaTerraza.HideSelection = true;
+            areaTerraza.Hint = "Área de la terraza";
+            areaTerraza.LeadingIcon = null;
+            areaTerraza.Location = new Point(363, 147);
+            areaTerraza.MaxLength = 32767;
+            areaTerraza.MouseState = MaterialSkin.MouseState.OUT;
+            areaTerraza.Name = "areaTerraza";
+            areaTerraza.PasswordChar = '\0';
+            areaTerraza.PrefixSuffixText = null;
+            areaTerraza.ReadOnly = false;
+            areaTerraza.RightToLeft = RightToLeft.No;
+            areaTerraza.SelectedText = "";
+            areaTerraza.SelectionLength = 0;
+            areaTerraza.SelectionStart = 0;
+            areaTerraza.ShortcutsEnabled = true;
+            areaTerraza.Size = new Size(251, 48);
+            areaTerraza.TabIndex = 6;
+            areaTerraza.TabStop = false;
+            areaTerraza.TextAlign = HorizontalAlignment.Left;
+            areaTerraza.TrailingIcon = null;
+            areaTerraza.UseSystemPasswordChar = false;
+            // 
+            // cantidadArmarios
+            // 
+            cantidadArmarios.AnimateReadOnly = false;
+            cantidadArmarios.BackgroundImageLayout = ImageLayout.None;
+            cantidadArmarios.CharacterCasing = CharacterCasing.Normal;
+            cantidadArmarios.Depth = 0;
+            cantidadArmarios.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            cantidadArmarios.HideSelection = true;
+            cantidadArmarios.Hint = "Cantidad de armarios";
+            cantidadArmarios.LeadingIcon = null;
+            cantidadArmarios.Location = new Point(66, 147);
+            cantidadArmarios.MaxLength = 32767;
+            cantidadArmarios.MouseState = MaterialSkin.MouseState.OUT;
+            cantidadArmarios.Name = "cantidadArmarios";
+            cantidadArmarios.PasswordChar = '\0';
+            cantidadArmarios.PrefixSuffixText = null;
+            cantidadArmarios.ReadOnly = false;
+            cantidadArmarios.RightToLeft = RightToLeft.No;
+            cantidadArmarios.SelectedText = "";
+            cantidadArmarios.SelectionLength = 0;
+            cantidadArmarios.SelectionStart = 0;
+            cantidadArmarios.ShortcutsEnabled = true;
+            cantidadArmarios.Size = new Size(251, 48);
+            cantidadArmarios.TabIndex = 5;
+            cantidadArmarios.TabStop = false;
+            cantidadArmarios.TextAlign = HorizontalAlignment.Left;
+            cantidadArmarios.TrailingIcon = null;
+            cantidadArmarios.UseSystemPasswordChar = false;
+            // 
+            // materialCheckedListBox1
+            // 
+            materialCheckedListBox1.AutoScroll = true;
+            materialCheckedListBox1.BackColor = Color.FromArgb(255, 255, 255);
+            materialCheckedListBox1.Controls.Add(calefaccionCheckbox);
+            materialCheckedListBox1.Controls.Add(gasCheckbox);
+            materialCheckedListBox1.Controls.Add(garajeCheckbox);
+            materialCheckedListBox1.Controls.Add(salonCheckbox);
+            materialCheckedListBox1.Depth = 0;
+            materialCheckedListBox1.Location = new Point(198, 214);
+            materialCheckedListBox1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCheckedListBox1.Name = "materialCheckedListBox1";
+            materialCheckedListBox1.Size = new Size(416, 70);
+            materialCheckedListBox1.Striped = false;
+            materialCheckedListBox1.StripeDarkColor = Color.Empty;
+            materialCheckedListBox1.TabIndex = 4;
+            // 
+            // calefaccionCheckbox
+            // 
+            calefaccionCheckbox.AutoSize = true;
+            calefaccionCheckbox.Depth = 0;
+            calefaccionCheckbox.Location = new Point(195, 15);
+            calefaccionCheckbox.Margin = new Padding(0);
+            calefaccionCheckbox.MouseLocation = new Point(-1, -1);
+            calefaccionCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            calefaccionCheckbox.Name = "calefaccionCheckbox";
+            calefaccionCheckbox.ReadOnly = false;
+            calefaccionCheckbox.Ripple = true;
+            calefaccionCheckbox.Size = new Size(119, 37);
+            calefaccionCheckbox.TabIndex = 3;
+            calefaccionCheckbox.Text = "Calefacción";
+            calefaccionCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // gasCheckbox
+            // 
+            gasCheckbox.AutoSize = true;
+            gasCheckbox.Depth = 0;
+            gasCheckbox.Location = new Point(116, 15);
+            gasCheckbox.Margin = new Padding(0);
+            gasCheckbox.MouseLocation = new Point(-1, -1);
+            gasCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            gasCheckbox.Name = "gasCheckbox";
+            gasCheckbox.ReadOnly = false;
+            gasCheckbox.Ripple = true;
+            gasCheckbox.Size = new Size(63, 37);
+            gasCheckbox.TabIndex = 2;
+            gasCheckbox.Text = "Gas";
+            gasCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // garajeCheckbox
+            // 
+            garajeCheckbox.AutoSize = true;
+            garajeCheckbox.Depth = 0;
+            garajeCheckbox.Location = new Point(14, 15);
+            garajeCheckbox.Margin = new Padding(0);
+            garajeCheckbox.MouseLocation = new Point(-1, -1);
+            garajeCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            garajeCheckbox.Name = "garajeCheckbox";
+            garajeCheckbox.ReadOnly = false;
+            garajeCheckbox.Ripple = true;
+            garajeCheckbox.Size = new Size(81, 37);
+            garajeCheckbox.TabIndex = 1;
+            garajeCheckbox.Text = "Garaje";
+            garajeCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // salonCheckbox
+            // 
+            salonCheckbox.AutoSize = true;
+            salonCheckbox.Depth = 0;
+            salonCheckbox.Location = new Point(327, 15);
+            salonCheckbox.Margin = new Padding(0);
+            salonCheckbox.MouseLocation = new Point(-1, -1);
+            salonCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            salonCheckbox.Name = "salonCheckbox";
+            salonCheckbox.ReadOnly = false;
+            salonCheckbox.Ripple = true;
+            salonCheckbox.Size = new Size(76, 37);
+            salonCheckbox.TabIndex = 0;
+            salonCheckbox.Text = "Salón";
+            salonCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // cantidadBaños
+            // 
+            cantidadBaños.AnimateReadOnly = false;
+            cantidadBaños.BackgroundImageLayout = ImageLayout.None;
+            cantidadBaños.CharacterCasing = CharacterCasing.Normal;
+            cantidadBaños.Depth = 0;
+            cantidadBaños.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            cantidadBaños.HideSelection = true;
+            cantidadBaños.Hint = "Cantidad de baños";
+            cantidadBaños.LeadingIcon = null;
+            cantidadBaños.Location = new Point(363, 81);
+            cantidadBaños.MaxLength = 32767;
+            cantidadBaños.MouseState = MaterialSkin.MouseState.OUT;
+            cantidadBaños.Name = "cantidadBaños";
+            cantidadBaños.PasswordChar = '\0';
+            cantidadBaños.PrefixSuffixText = null;
+            cantidadBaños.ReadOnly = false;
+            cantidadBaños.RightToLeft = RightToLeft.No;
+            cantidadBaños.SelectedText = "";
+            cantidadBaños.SelectionLength = 0;
+            cantidadBaños.SelectionStart = 0;
+            cantidadBaños.ShortcutsEnabled = true;
+            cantidadBaños.Size = new Size(251, 48);
+            cantidadBaños.TabIndex = 3;
+            cantidadBaños.TabStop = false;
+            cantidadBaños.TextAlign = HorizontalAlignment.Left;
+            cantidadBaños.TrailingIcon = null;
+            cantidadBaños.UseSystemPasswordChar = false;
+            // 
+            // cantidadHabitaciones
+            // 
+            cantidadHabitaciones.AnimateReadOnly = false;
+            cantidadHabitaciones.BackgroundImageLayout = ImageLayout.None;
+            cantidadHabitaciones.CharacterCasing = CharacterCasing.Normal;
+            cantidadHabitaciones.Depth = 0;
+            cantidadHabitaciones.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            cantidadHabitaciones.HideSelection = true;
+            cantidadHabitaciones.Hint = "Cantidad de habitaciones";
+            cantidadHabitaciones.LeadingIcon = null;
+            cantidadHabitaciones.Location = new Point(66, 81);
+            cantidadHabitaciones.MaxLength = 32767;
+            cantidadHabitaciones.MouseState = MaterialSkin.MouseState.OUT;
+            cantidadHabitaciones.Name = "cantidadHabitaciones";
+            cantidadHabitaciones.PasswordChar = '\0';
+            cantidadHabitaciones.PrefixSuffixText = null;
+            cantidadHabitaciones.ReadOnly = false;
+            cantidadHabitaciones.RightToLeft = RightToLeft.No;
+            cantidadHabitaciones.SelectedText = "";
+            cantidadHabitaciones.SelectionLength = 0;
+            cantidadHabitaciones.SelectionStart = 0;
+            cantidadHabitaciones.ShortcutsEnabled = true;
+            cantidadHabitaciones.Size = new Size(251, 48);
+            cantidadHabitaciones.TabIndex = 2;
+            cantidadHabitaciones.TabStop = false;
+            cantidadHabitaciones.TextAlign = HorizontalAlignment.Left;
+            cantidadHabitaciones.TrailingIcon = null;
+            cantidadHabitaciones.UseSystemPasswordChar = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Yu Gothic UI Semibold", 20F);
+            label1.Location = new Point(211, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(262, 37);
+            label1.TabIndex = 1;
+            label1.Text = "Datos de la vivienda";
             // 
             // AñadirVivienda
             // 
@@ -358,15 +384,16 @@
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private Label label1;
         private MaterialSkin.Controls.MaterialCheckedListBox materialCheckedListBox1;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox21;
-        private MaterialSkin.Controls.MaterialTextBox2 nombrePropietario;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox23;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox22;
-        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox4;
-        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox3;
-        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox2;
-        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox1;
+        private MaterialSkin.Controls.MaterialTextBox2 cantidadBaños;
+        private MaterialSkin.Controls.MaterialTextBox2 cantidadHabitaciones;
+        private MaterialSkin.Controls.MaterialTextBox2 areaTerraza;
+        private MaterialSkin.Controls.MaterialTextBox2 cantidadArmarios;
+        private MaterialSkin.Controls.MaterialCheckbox calefaccionCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox gasCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox garajeCheckbox;
+        private MaterialSkin.Controls.MaterialCheckbox salonCheckbox;
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialComboBox tipoVivienda;
     }
 }
