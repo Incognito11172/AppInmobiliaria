@@ -19,6 +19,7 @@ namespace Presentation
 {
     public partial class adminPage : Form
     {
+
         public adminPage()
         {
             InitializeComponent();
@@ -43,8 +44,7 @@ namespace Presentation
                     card.ImagenPropiedad = Image.FromStream(stream); 
                 }
             }
-
-            inmueblesLayoutPanel.Controls.Add(card); 
+                inmueblesLayoutPanel.Controls.Add(card); 
         }
 
         private void CargarOficinas()
@@ -111,9 +111,45 @@ namespace Presentation
                     }
                 }
 
+                card.Click += (s, e) => AbrirFicha(propiedad);
                 inmueblesLayoutPanel.Controls.Add(card);
             }
         }
+
+        private void AbrirFicha(PropiedadCompleta propiedad)
+        {
+            Form VerFicha;
+
+            switch (propiedad.tipo)
+            {
+                case "Casa":
+                    VerFicha = new FichaCasa();
+                    ((FichaCasa)VerFicha).EnviarDatosCasa(propiedad);
+                    break;
+
+                case "Piso":
+                    VerFicha = new FichaPiso();
+                    ((FichaPiso)VerFicha).EnviarDatosPiso(propiedad);
+                    break;
+
+                case "Villa":
+                    VerFicha = new FichaVilla();
+                    ((FichaVilla)VerFicha).EnviarDatosVilla(propiedad);
+                    break;
+
+                case "Local":
+                    VerFicha = new FichaLocal();
+                    ((FichaLocal)VerFicha).EnviarDatosLocal(propiedad);
+                    break;
+
+                default:
+                    MessageBox.Show($"No se encontró un formulario para el tipo {propiedad.tipo}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+            }
+
+            VerFicha.ShowDialog();
+        }
+
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
