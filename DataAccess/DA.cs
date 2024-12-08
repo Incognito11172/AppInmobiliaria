@@ -1,6 +1,9 @@
 ﻿using System.Configuration;
 using Microsoft.Data.SqlClient;
 
+// Felicidades si entró acá profe :D
+// Hay muchas cosas que nos hubiese gustado implementar a profundidad, pero espero que disfrute la aplicación
+ 
 namespace DataAccess
 {
     public class DA
