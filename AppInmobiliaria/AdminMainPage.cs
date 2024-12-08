@@ -47,6 +47,7 @@ namespace Presentation
             }
 
             inmueblesLayoutPanel.Controls.Add(card);
+            CargarPropiedades();
         }
 
         private void CargarOficinas()
@@ -419,6 +420,11 @@ namespace Presentation
             {
                 MessageBox.Show("Error al eliminar el visita: " + ex.Message);
             }
+        }
+
+        private void oficinaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarPropiedades();
         }
     }
 }
